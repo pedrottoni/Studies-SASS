@@ -104,6 +104,10 @@ body main section#card ul li strong {
   font-size: .8rem;
 }
 
+body main section#card ul li strong:hover body main section#card ul li span {
+  background-color: red;
+}
+
 body main section#primary {
   color: white;
   padding: 1.5rem;
@@ -138,5 +142,9 @@ body main section#primary a {
   max-width: 70vw;
   -webkit-box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
           box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+body main section#primary a:hover {
+  background-color: #ccccff;
 }
 /*# sourceMappingURL=main.css.map */
