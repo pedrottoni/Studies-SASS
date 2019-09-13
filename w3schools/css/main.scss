@@ -1,0 +1,133 @@
+@import "reset";
+
+$article: article1;
+$attr: padding;
+
+$grid-gutter: 16px;
+$grid-columns: 12;
+$grid-max: 1004px;
+
+@mixin title {
+    font: {
+        size: 3rem;
+        weight: bold;
+        family: georgia;
+    }
+
+    text-align: center;
+    color: green;
+}
+
+@mixin subtitle($size, $weight) {
+    font: {
+        size: $size;
+        weight: $weight;
+    }
+
+    color: adjust-color(yellowgreen, $lightness: 10%);
+    text-align: center;
+}
+
+@mixin grid($cols, $mgn) {
+    float: left;
+    margin-right: $mgn;
+    margin-bottom: $mgn;
+    width: ((100% - (($cols - 1) * $mgn)) / $cols);
+
+    &:nth-child(#{$cols}n) {
+        margin-right: 0;
+    }
+}
+
+h1 {
+    @include title();
+}
+
+h2 {
+    @include subtitle(2rem, normal)
+}
+
+section {
+
+    .buttons {
+        display: flex;
+        place-content: center;
+    }
+
+    .primary {
+        border: none;
+        padding: 15px 30px;
+        text-align: center;
+        font-size: 16px;
+        cursor: pointer;
+        background-color: adjust-color(yellowgreen, $lightness: 10%);
+        color: white;
+        margin: 6px 3px;
+
+        &:hover {
+            box-shadow: 0 1px 10px -5px #000;
+        }
+    }
+
+    .secondary {
+        @extend .primary;
+        background-color: green;
+    }
+
+    .#{$article} {
+        #{$attr}: 10px;
+
+        border: {
+            width: .5px;
+            style: solid;
+            color: complement(adjust-color(yellowgreen, $lightness: 45%));
+        }
+    }
+}
+
+@for $i from 1 through 100 {
+    .mTop-#{$i} {
+        margin: #{$i}px 0;
+    }
+}
+
+#projects li {
+    @include grid(6, 1%);
+    list-style: none;
+
+    img {
+        width: 100%;
+    }
+}
+
+[class*="grid-"] {
+    float: left;
+    padding: 0 $grid-gutter;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+@for $i from 1 through $grid-columns {
+    .grid-#{$i} {
+        width: 100% / $grid-columns * $i
+    }
+}
+
+.container {
+    max-width: $grid-max;
+    margin: 0 auto;
+}
+
+.row {
+    box-sizing: border-box;
+}
+
+.row:before,
+.row:after {
+    content: " ";
+    display: table;
+}
+
+.row:after {
+    clear: both;
+}
