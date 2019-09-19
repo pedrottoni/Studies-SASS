@@ -1,0 +1,73 @@
+body {
+  font-family: basic-sans, sans-serif;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 1.125em;
+  line-height: 1.6;
+  color: #333;
+  background: #ddd;
+}
+
+.content {
+  background: white;
+  width: 70vw;
+  padding: 3em;
+  -webkit-box-shadow: 0 0 3em rgba(0, 0, 0, 0.15);
+          box-shadow: 0 0 3em rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  margin: 0 0 0.5em;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-style: italic;
+  color: #ee6352;
+  line-height: 0.8;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.youtube {
+  color: #ee5353;
+}
+
+.community {
+  color: #53aeee;
+}
+
+.articles {
+  color: #b3ee53;
+}
+
+.preto {
+  color: gray;
+}
+
+h1 {
+  font-size: 5rem;
+}
+
+#signature-primary {
+  font-style: italic;
+  color: #ee6352;
+}
+
+#signature-secondary {
+  font-style: normal;
+  color: #ee6352;
+}
+/*# sourceMappingURL=main.css.map */
