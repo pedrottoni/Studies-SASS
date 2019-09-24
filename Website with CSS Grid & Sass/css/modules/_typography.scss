@@ -4,7 +4,7 @@ $ff-sans-serif: "Six Caps", sans-serif;
 $ff-serif: "Merriweather", serif;
 
 $fw-normal: 400;
-$ff-bold: 900;
+$fw-bold: 900;
 $letter-spacing: 10px;
 
 @mixin sans-serif($f-s, $l-s: 0.2em, $c: $dark-gray, $t-t: uppercase, $l-h: 1) {

@@ -1,7 +1,7 @@
 .about-me {
-  @extend %container;
-  @extend %clearfix;
-  margin-top: 2em;
+  @include container;
+  @include clearfix;
+  margin: 3em auto;
 }
 
 .about-img {

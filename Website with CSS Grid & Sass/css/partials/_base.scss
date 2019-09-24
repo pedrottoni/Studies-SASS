@@ -23,4 +23,5 @@ h1 {
 
 h2 {
   @include sans-serif($f-s: 1.9rem);
+  font-weight: normal;
 }
