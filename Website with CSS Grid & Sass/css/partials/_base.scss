@@ -19,9 +19,8 @@ p {
 h1 {
   color: $accent;
   line-height: 1;
-  font-size: 3.125rem;
 }
 
 h2 {
-  @include sans-serif($f-s: 2rem);
+  @include sans-serif($f-s: 1.9rem);
 }

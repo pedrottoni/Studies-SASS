@@ -1,4 +1,16 @@
 @import url("https://fonts.googleapis.com/css?family=Merriweather:400,900|Six+Caps&display=swap");
+.about-me {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 50em;
+}
+
+.about-me::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
 body {
   color: #a6a6a6;
   font-family: "Merriweather", serif;
@@ -20,12 +32,11 @@ p {
 h1 {
   color: #03b1c4;
   line-height: 1;
-  font-size: 3.125rem;
 }
 
 h2 {
   font-family: "Six Caps", sans-serif;
-  font-size: 2rem;
+  font-size: 1.9rem;
   letter-spacing: 0.2em;
   color: #616161;
   text-transform: uppercase;
@@ -136,6 +147,53 @@ h2 {
           justify-content: center;
 }
 
+.about-me {
+  margin-top: 2em;
+}
+
+.about-img {
+  max-height: 25rem;
+}
+
+@media (min-width: 42em) {
+  .about-img {
+    float: left;
+    margin-right: 1em;
+  }
+}
+
+.about-subtitle {
+  margin-top: 1rem;
+}
+
+@supports (display: grid) {
+  .about-me {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
+        grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
+  }
+  .about-img {
+    grid-column: port / img;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+  }
+  .about-title {
+    grid-column: name / port;
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    grid-row: 1 / 2;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+  .about-subtitle,
+  .about-text {
+    grid-column: port / port;
+  }
+}
+
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /* Document
        ========================================================================== */
@@ -179,7 +237,7 @@ section {
      * `article` contexts in Chrome, Firefox, and Safari.
      */
 h1 {
-  font-size: 2em;
+  font-size: 3em;
   margin: 0.67em 0;
 }
 
