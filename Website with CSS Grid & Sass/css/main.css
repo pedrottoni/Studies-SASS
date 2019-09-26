@@ -195,7 +195,7 @@ h2 {
 .portfolio {
   text-align: center;
   background-color: #e9eaec;
-  padding: 2em 0;
+  padding: 5em 0;
 }
 
 .portfolio-items {
@@ -301,6 +301,92 @@ h2 {
   }
 }
 
+.contact {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 50em;
+  padding: 5em 0;
+}
+
+.contact h1 {
+  text-align: center;
+}
+
+.contact label {
+  display: block;
+  margin-top: 1em;
+  color: #616161;
+}
+
+.contact form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.contact input,
+.contact textarea {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  padding: 0.75em;
+  width: 100%;
+  background-color: #fafafa;
+  border: 1px solid #e9eaec;
+}
+
+.button {
+  display: inline-block;
+  width: auto !important;
+  margin-top: 1em;
+  margin-left: auto;
+  padding: 0.5em 1.5em !important;
+  background-color: #03b1c4 !important;
+  border: none;
+  font-family: "Six Caps", sans-serif;
+  font-size: 2rem;
+  letter-spacing: 0.2em;
+  color: white;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+footer {
+  background-color: #223944;
+  padding: 5em 0;
+  text-align: center;
+}
+
+.social-icons {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 15em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin: 1.25em auto 1.75em;
+}
+
+.social-icon {
+  width: 25%;
+}
+
+.copyright::before {
+  content: "";
+  display: block;
+  height: 1px;
+  background: #03b1c4;
+  margin: 4em auto;
+  width: 25%;
+}
+
 /*! normalize-scss | MIT/GPLv2 License | bit.ly/normalize-scss */
 /* Document
        ========================================================================== */
@@ -345,7 +431,7 @@ section {
      */
 h1 {
   font-size: 3em;
-  margin: 0.67em 0;
+  margin: 0 0 0.67em 0;
 }
 
 /* Grouping content

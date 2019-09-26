@@ -142,7 +142,7 @@
         /* Set 1 unit of vertical rhythm on the top and bottom margins. */
         @include normalize-margin(1 0, $h1-font-size);
       } @else {
-        margin: 0.67em 0;
+        margin: 0 0 0.67em 0;
       }
     }
 
