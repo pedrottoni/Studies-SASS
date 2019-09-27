@@ -6,6 +6,12 @@ body {
   font-size: 0.875rem;
 }
 
+@media (min-width: 50em) {
+  body {
+    font-size: 1.125rem;
+  }
+}
+
 img {
   max-width: 100%;
 }
@@ -20,6 +26,13 @@ p {
 h1 {
   color: #03b1c4;
   line-height: 1;
+  font-size: 3.25rem !important;
+}
+
+@media (min-width: 50em) {
+  h1 {
+    font-size: 4.25rem !important;
+  }
 }
 
 h2 {
@@ -30,6 +43,12 @@ h2 {
   text-transform: uppercase;
   line-height: 1;
   font-weight: normal;
+}
+
+@media (min-width: 50em) {
+  h2 {
+    font-size: 3rem;
+  }
 }
 
 .hero {
@@ -49,11 +68,17 @@ h2 {
 }
 
 .hero h1 {
-  font-size: 1.5rem;
+  font-size: 1.5rem !important;
   font-weight: 400;
   color: #223944;
   line-height: 1.5;
   text-align: center;
+}
+
+@media (min-width: 50em) {
+  .hero h1 {
+    font-size: 2.5vw;
+  }
 }
 
 .hero h1 span {
@@ -64,6 +89,12 @@ h2 {
   text-transform: uppercase;
   line-height: 1;
   display: block;
+}
+
+@media (min-width: 50em) {
+  .hero h1 span {
+    font-size: 7vw;
+  }
 }
 
 .hero h1::before, .hero h1::after {
@@ -170,12 +201,20 @@ h2 {
     display: grid;
     -ms-grid-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
         grid-template-columns: [port-start] minmax(6em, 1fr) [name-start] minmax(6em, 1fr) [img-end] 2fr [port-end];
+    grid-column-gap: 1rem;
   }
   .about-img {
     grid-column: port / img;
     -ms-grid-row: 1;
     -ms-grid-row-span: 1;
     grid-row: 1 / 2;
+  }
+  @media (min-width: 50em) {
+    .about-img {
+      -ms-grid-row: 1;
+      -ms-grid-row-span: 3;
+      grid-row: 1 / 4;
+    }
   }
   .about-title {
     grid-column: name / port;
@@ -189,6 +228,20 @@ h2 {
   .about-subtitle,
   .about-text {
     grid-column: port / port;
+  }
+  @media (min-width: 50em) {
+    .about-subtitle,
+    .about-text {
+      grid-column: image-end / port-end;
+    }
+  }
+  .about-subtitle {
+    -ms-grid-row: 2;
+    grid-row: 2;
+  }
+  .about-text {
+    -ms-grid-row: 3;
+    grid-row: 3;
   }
 }
 
@@ -282,6 +335,12 @@ h2 {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
+  @media (min-width: 50em) {
+    .portfolio-items {
+      -ms-grid-columns: (1fr)[4];
+          grid-template-columns: repeat(4, 1fr);
+    }
+  }
   .portfolio-items .portfolio-description {
     display: none;
   }
@@ -326,6 +385,39 @@ h2 {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+
+@supports (display: grid) {
+  @media (min-width: 50em) {
+    .contact form {
+      display: -ms-grid;
+      display: grid;
+      -webkit-column-gap: 1em;
+              column-gap: 1em;
+          grid-template-areas: "name     email" "message  message" "   .     button";
+    }
+    .contact form .name {
+      -ms-grid-row: 1;
+      -ms-grid-column: 1;
+      grid-area: name;
+    }
+    .contact form .email {
+      -ms-grid-row: 1;
+      -ms-grid-column: 2;
+      grid-area: email;
+    }
+    .contact form .message {
+      -ms-grid-row: 2;
+      -ms-grid-column: 1;
+      -ms-grid-column-span: 2;
+      grid-area: message;
+    }
+    .contact form .button {
+      -ms-grid-row: 3;
+      -ms-grid-column: 2;
+      grid-area: button;
+    }
+  }
 }
 
 .contact input,
@@ -431,7 +523,6 @@ section {
      */
 h1 {
   font-size: 3em;
-  margin: 0 0 0.67em 0;
 }
 
 /* Grouping content
