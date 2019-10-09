@@ -1,0 +1,46 @@
+.hero {
+  background-image: url("../img/header-bg.png");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  h1 {
+    font-size: 1.5rem !important;
+    font-weight: $fw-normal;
+    color: $dark-blue;
+    line-height: 1.5;
+    text-align: center;
+    @include mq {
+      font-size: 2.5vw;
+    }
+
+    span {
+      @include sans-serif($f-s: 4rem, $c: $accent);
+      display: block;
+
+      @include mq {
+        font-size: 7vw;
+      }
+    }
+
+    &::before,
+    &::after {
+      content: "";
+      display: block;
+      width: 50%;
+      height: 1px;
+      background: $dark-blue;
+    }
+
+    &::before {
+      margin: 0 auto 3em;
+    }
+
+    &::after {
+      margin: 3em auto 0;
+    }
+  }
+}

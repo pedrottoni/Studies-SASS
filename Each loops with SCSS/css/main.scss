@@ -1,0 +1,70 @@
+body {
+  font-family: basic-sans, sans-serif;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.125em;
+  line-height: 1.6;
+  color: #333;
+  background: #ddd;
+}
+
+.content {
+  background: white;
+  width: 70vw;
+  padding: 3em;
+  box-shadow: 0 0 3em rgba(0, 0, 0, 0.15);
+}
+
+h1 {
+  margin: 0 0 0.5em;
+  text-transform: uppercase;
+  font-weight: 900;
+  font-style: italic;
+  color: #ee6352;
+  line-height: 0.8;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+$font-sizes: (
+  h1: 5rem
+);
+
+$colors: (
+  youtube: hsl(0, 82%, 63%),
+  community: hsl(205, 82%, 63%),
+  articles: hsl(83, 82%, 63%),
+  preto: hsl(0, 0, 50)
+);
+
+$signatures: (
+  signature-primary: italic,
+  signature-secondary: normal
+);
+
+@each $names, $colore in $colors {
+  .#{$names} {
+    color: $colore;
+  }
+}
+
+@each $tag, $font-size in $font-sizes {
+  #{$tag} {
+    font-size: $font-size;
+  }
+}
+
+@each $a-class, $font-style in $signatures {
+  ##{$a-class} {
+    font-style: $font-style;
+    color: #ee6352;
+  }
+}

@@ -1,0 +1,39 @@
+.welcome {
+  display: flex;
+  color: $light-gray;
+
+  h2 {
+    color: $white;
+
+    &::after {
+      content: "";
+      display: block;
+      width: 20%;
+      height: 2px;
+      background: $dark-gray;
+      margin: 1em auto 0;
+    }
+  }
+
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: minmax(4em, 1fr) minmax(auto, 30em) minmax(4em, 1fr);
+  }
+}
+
+.welcome-left img,
+.welcome-right img {
+  object-fit: cover;
+  min-width: 100%;
+  min-height: 100%;
+  display: block;
+}
+
+.welcome-middle {
+  background: $dark-blue;
+  padding: 2rem 3vw;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
