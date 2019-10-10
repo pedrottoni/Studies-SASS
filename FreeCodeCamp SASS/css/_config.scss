@@ -1,0 +1,22 @@
+$primary-color: hsl(0, 0%, 15%);
+$secondary-color: hsl(15.6, 100%, 59%);
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+@mixin transition-ease {
+  transition: all .5s ease-in-out;
+}
+
+@function set-text-color($color) {
+  @if (lightness($color) > 40%) {
+    @return #000;
+  }
+
+  @else {
+    @return #fff
+  }
+}
