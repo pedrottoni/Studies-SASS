@@ -1,17 +1,27 @@
-const menuBtn = document.querySelector('.menu-btn');
-const hamburger = document.querySelector('.menu-btn-burger');
+const menuBtn = document.querySelector(".menu-btn");
+const hamburger = document.querySelector(".menu-btn-burger");
+
+const nav = document.querySelector(".nav");
+const menuNav = document.querySelector(".menu-nav");
+
+const navItens = document.querySelectorAll(".menu-nav-item");
 
 let showMenu = false;
 
-menuBtn.addEventListener('click', toggleMenu);
+menuBtn.addEventListener("click", toggleMenu);
 
 function toggleMenu() {
   if (!showMenu) {
-    hamburger.classList.add('open');
+    hamburger.classList.add("open");
+    nav.classList.add("open");
+    menuNav.classList.add("open");
+    navItens.forEach(item => item.classList.add("open"));
     showMenu = true;
   } else {
-    hamburger.classList.remove('open');
+    hamburger.classList.remove("open");
+    nav.classList.remove("open");
+    menuNav.classList.remove("open");
+    navItens.forEach(item => item.classList.remove("open"));
     showMenu = false;
   }
-
 }

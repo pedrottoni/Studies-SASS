@@ -22,6 +22,7 @@
   font-size: 5rem;
   padding-bottom: 1rem;
   margin-top: 1rem;
+  margin-bottom: 1rem;
   border-bottom: 2px solid #fff;
 }
 
@@ -45,7 +46,7 @@
 .menu-btn-burger {
   position: absolute;
   right: 0;
-  top: .5rem;
+  top: 0.5rem;
   width: 28px;
   height: 3px;
   background: #fff;
@@ -54,7 +55,7 @@
 }
 
 .menu-btn-burger::before {
-  content: '';
+  content: "";
   position: absolute;
   top: -8px;
   width: 28px;
@@ -65,7 +66,7 @@
 }
 
 .menu-btn-burger::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 8px;
   width: 20px;
@@ -92,11 +93,103 @@
           transform: rotate(-45deg) translate(3px, -7px);
 }
 
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  opacity: 0.98;
+  visibility: hidden;
+}
+
+.nav.open {
+  visibility: visible;
+}
+
+.nav .menu-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #262626;
+  list-style: none;
+  padding-right: 1rem;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.nav .menu-nav.open {
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}
+
+.nav .menu-nav-item {
+  -webkit-transform: translateX(100vw);
+          transform: translateX(100vw);
+  padding: 2rem 0;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.nav .menu-nav-item.open {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.nav .menu-nav-item.active > a {
+  color: #ff642e;
+}
+
+.nav .menu-nav-link {
+  font-size: 2rem;
+  text-transform: uppercase;
+  font-weight: 300;
+  -webkit-transition: all .5s ease-in-out;
+  transition: all .5s ease-in-out;
+}
+
+.nav .menu-nav-link:hover {
+  color: #ff642e;
+}
+
+.menu-nav-item:nth-child(1) {
+  -webkit-transition-delay: 0.25s;
+          transition-delay: 0.25s;
+}
+
+.menu-nav-item:nth-child(2) {
+  -webkit-transition-delay: 0.35s;
+          transition-delay: 0.35s;
+}
+
+.menu-nav-item:nth-child(3) {
+  -webkit-transition-delay: 0.45s;
+          transition-delay: 0.45s;
+}
+
+.menu-nav-item:nth-child(4) {
+  -webkit-transition-delay: 0.55s;
+          transition-delay: 0.55s;
+}
+
 body {
   background: #262626;
   color: #fff;
   height: 100vh;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1;
 }
 
@@ -130,7 +223,7 @@ main .social-icons {
 }
 
 main .social-icons a {
-  padding: .4rem;
+  padding: 0.4rem;
   -webkit-transition: all .5s ease-in-out;
   transition: all .5s ease-in-out;
 }
@@ -142,7 +235,7 @@ main .social-icons a:hover {
 footer {
   font-size: 1rem;
   position: fixed;
-  bottom: .4rem;
+  bottom: 0.4rem;
   right: 1rem;
   text-align: right;
   page-break-after: 1rem;
