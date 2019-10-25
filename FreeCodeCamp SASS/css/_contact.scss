@@ -1,0 +1,45 @@
+.contact {
+  height: 100%;
+  padding-top: 40vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(
+      to right,
+      rgba($primary-color, 0.9),
+      rgba($primary-color, 0.3)
+    ),
+    url("https://source.unsplash.com/random?designer") center top;
+  background-size: cover;
+
+  &-name {
+    font-size: 5rem;
+    padding-bottom: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid set-text-color($primary-color);
+
+    &-last {
+      color: $secondary-color;
+      font-weight: 700;
+    }
+  }
+
+  h2 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+
+  &-list {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 2rem;
+    font-size: 1.5rem;
+  }
+
+  .social-icons {
+    position: initial;
+    margin-top: 2rem;
+  }
+}
